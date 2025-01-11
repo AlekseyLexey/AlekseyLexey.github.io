@@ -1,0 +1,12 @@
+@import "./reset.css";
+@import "./elements.css";
+@import "./header.css";
+@import "./main.css";
+@import "./footer.css";
+
+@media (max-width: 768px) {
+  * {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

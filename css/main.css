@@ -1,0 +1,59 @@
+.about {
+  position: relative;
+  background-color: #00000010;
+}
+.about::before,
+.about::after {
+  content: "";
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  height: 6px;
+  width: 60%;
+  background-color: orange;
+}
+.about::before {
+  top: 0;
+  transform: translateY(-50%);
+}
+.about::after {
+  bottom: 0;
+  transform: translateY(50%);
+}
+.about__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.about__info {
+  flex: 0 1 70%;
+}
+.about__img {
+  display: block;
+  max-height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 1 300px;
+}
+@media (max-width: 768px) {
+  .about__img {
+    max-height: 200px;
+    flex: 0 1 200px;
+  }
+}
+
+.hobbies__subtitle {
+  padding-left: 30px;
+}
+.hobbies__subtitle li {
+  list-style-type: decimal;
+  margin-bottom: 10px;
+}
+.hobbies__subtitle li:last-child {
+  margin-bottom: 0;
+}
+
+.plans {
+  background-color: #00000010;
+}

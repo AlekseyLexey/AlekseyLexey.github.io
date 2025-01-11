@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  flex: 1 1 100%;
+  min-height: 500px;
+  background: url("../img/Blog\ von\ Martin\ Wolf.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.header__content {
+  transform: translateY(-20%);
+  z-index: 10;
+  display: flex;
+  gap: 30px;
+}
+.header__logo {
+  font-weight: 700;
+  font-size: 56px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.5em;
+  min-height: 2.5em;
+  border-radius: 8px;
+}
+.header__name {
+  font-weight: 700;
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+.header__professional {
+  display: block;
+  text-align: right;
+  font-size: 30px;
+  position: relative;
+  transition: all 0.5s ease-in-out 0s;
+}
+@media (max-width: 768px) {
+  .header__logo {
+    font-size: 36px;
+  }
+  .header__name {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .header__professional {
+    font-size: 24px;
+  }
+}
+.header__professional::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  width: 20%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s ease-in-out 0s;
+}
+.header__professional:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.header__professional:hover::after {
+  width: 60%;
+}
